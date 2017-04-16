@@ -1,0 +1,11 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+# 屏蔽Idea项目部分编译文件与Idea自身创建的文件
+/.idea/
+*.iml
+/target/
+# 屏蔽Log文件 如果有
+/logs/
