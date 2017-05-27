@@ -31,7 +31,7 @@ public class CoreController extends BaseController {
 	TbwcweChatBookReadService tbwcweChatBookReadService;
 	@Autowired
     TbwcBookReadVoteInfoService tbwcBookReadVoteInfoService;
-	
+
 	/**
 	 * @author Petty
 	 * @see '与微信通信获取openid与用户基础信息'
@@ -53,7 +53,7 @@ public class CoreController extends BaseController {
 					response.setCharacterEncoding("UTF-8");
 					String code = request.getParameter("code");
 					String type = request.getParameter("type");
-					
+
 					get_access_token_url = get_access_token_url.replace("APPID",CustomizedPropertyPlaceholderConfigurer.getContextProperty("AppID").toString());
 					get_access_token_url = get_access_token_url.replace("SECRET",CustomizedPropertyPlaceholderConfigurer.getContextProperty("AppSecret").toString());
 					get_access_token_url = get_access_token_url.replace("CODE", code);
@@ -78,8 +78,8 @@ public class CoreController extends BaseController {
 					String user_city = userInfoJO.getString("city");
 					String user_country = userInfoJO.getString("country");
 					String user_headimgurl = userInfoJO.getString("headimgurl");
-					
-					
+
+
 					System.out.println("openid:"+user_openid);
 					System.out.println("nichname:"+user_nickname);
 					System.out.println("sex:"+user_sex);
@@ -98,8 +98,8 @@ public class CoreController extends BaseController {
 					e.printStackTrace();
 				}
 	}
-	
-	
+
+
 	/*
 	 * 获取用户信息
 	 */
